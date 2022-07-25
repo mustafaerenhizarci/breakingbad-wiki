@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "breakingbad",
+    "slug": "breakingbad",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
