@@ -1,21 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Text, View, ImageBackground } from "react-native";
+import { TailwindProvider, useTailwind } from "tailwind-rn";
+import utilities from "./tailwind.json";
+
+import Header from "./components/Header";
+import Content from "./components/Content";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TailwindProvider utilities={utilities}>
+      <View>
+        <Header />
+        <Content/>
+      </View>
+    </TailwindProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

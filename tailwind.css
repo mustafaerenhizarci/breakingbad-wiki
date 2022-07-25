@@ -1,0 +1,95 @@
+.m-0 {
+  margin: 0px
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
+}
+
+.flex {
+  display: flex
+}
+
+.h-5\/6 {
+  height: 83.333333%
+}
+
+.h-1\/6 {
+  height: 16.666667%
+}
+
+.h-full {
+  height: 100%
+}
+
+.items-center {
+  align-items: center
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.rounded-xl {
+  border-radius: 0.75rem
+}
+
+.bg-yellow-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity))
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.p-0 {
+  padding: 0px
+}
+
+.p-6 {
+  padding: 1.5rem
+}
+
+.p-3 {
+  padding: 0.75rem
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+.font-light {
+  font-weight: 300
+}
+
+.font-bold {
+  font-weight: 700
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity))
+}
