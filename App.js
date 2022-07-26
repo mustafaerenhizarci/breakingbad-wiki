@@ -3,16 +3,12 @@ import { Text, View, ImageBackground } from "react-native";
 import { TailwindProvider, useTailwind } from "tailwind-rn";
 import utilities from "./tailwind.json";
 
-import Header from "./components/Header";
-import Content from "./components/Content";
+import MainContainer from "./navigation/MainContainer";
 
 export default function App() {
   return (
     <TailwindProvider utilities={utilities}>
-      <View>
-        <Header />
-        <Content/>
-      </View>
+      <MainContainer/>
     </TailwindProvider>
   );
 }
