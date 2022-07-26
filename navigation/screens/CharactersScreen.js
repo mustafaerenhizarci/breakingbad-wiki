@@ -1,5 +1,11 @@
 import * as React from "react";
-import { View, Text, TextInput, TouchableOpacity,ActivityIndicator } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  ActivityIndicator,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import axios from "axios";
 
@@ -12,29 +18,14 @@ const url = "https://www.breakingbadapi.com/api/characters";
 export default function CharactersScreen({ navigation }) {
   const [characters, setCharacters] = React.useState([]);
 
-  React.useEffect(()=>{
-
-
-
+  React.useEffect(() => {
     async function fetchCharacters() {
-        const res = await axios(url);
-        setCharacters(res.data);
-        
-        
-      }
+      const res = await axios(url);
+      setCharacters(res.data);
+    }
 
-    fetchCharacters()
-    
-
-
-      
-
-  },[1]);
-
-  
-
-  
-  
+    fetchCharacters();
+  }, [1]);
 
   const tailwind = useTailwind();
   return (
@@ -74,18 +65,26 @@ export default function CharactersScreen({ navigation }) {
         }}
         style={tailwind("w-full pb-6 bg-gray-500")}
       >
-        {(characters.length > 0) ? characters.map((char) => (
-          <CharacterCard
-            key={char.char_id}
-            img={char.img}
-            name={char.name}
-            nickname={char.nickname}
-            birthday={char.birthday}
-            occupation={char.occupation}
-            status={char.status}
-            actor={char.portrayed}
+        {characters.length > 0 ? (
+          characters.map((char) => (
+            <CharacterCard
+              key={char.char_id}
+              img={char.img}
+              name={char.name}
+              nickname={char.nickname}
+              birthday={char.birthday}
+              occupation={char.occupation}
+              status={char.status}
+              actor={char.portrayed}
+            />
+          ))
+        ) : (
+          <ActivityIndicator
+            style={tailwind("my-32")}
+            size="large"
+            color="white"
           />
-        )) : <ActivityIndicator style={tailwind('my-32')} size="large" color="white"/>}
+        )}
       </ScrollView>
     </View>
   );
