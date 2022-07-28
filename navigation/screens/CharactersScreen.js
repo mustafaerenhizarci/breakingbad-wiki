@@ -17,7 +17,7 @@ const url = "https://www.breakingbadapi.com/api/characters";
 
 export default function CharactersScreen({ navigation }) {
   const [characters, setCharacters] = React.useState([]);
-
+  const [searchValue, setSearchValue] = React.useState("");
   React.useEffect(() => {
     async function fetchCharacters() {
       const res = await axios(url);
@@ -39,45 +39,37 @@ export default function CharactersScreen({ navigation }) {
         )}
       >
         <TextInput
+          onChangeText={setSearchValue}
+          value={searchValue}
           style={tailwind(
-            "text-black bg-white w-4/6 h-12 px-3 py-2 text-lg rounded-md"
+            "text-black bg-white w-5/6 h-12 px-3 py-2 text-lg rounded-md"
           )}
           placeholder="Enter a name"
         />
-        <TouchableOpacity
-          style={tailwind(
-            "rounded-md h-12 w-24  bg-blue-500 flex justify-center items-center"
-          )}
-        >
-          <Text style={tailwind("text-white text-center font-bold text-sm")}>
-            SEARCH
-          </Text>
-        </TouchableOpacity>
       </View>
 
-      <ScrollView
-        contentContainerStyle={{
+      <ScrollView contentContainerStyle={{
           flexGrow: 1,
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "space-around",
           alignItems: "center",
-        }}
-        style={tailwind("w-full pb-6 bg-gray-500")}
-      >
+        }} style={tailwind("w-full pb-6 bg-gray-500")}>
         {characters.length > 0 ? (
-          characters.map((char) => (
-            <CharacterCard
-              key={char.char_id}
-              img={char.img}
-              name={char.name}
-              nickname={char.nickname}
-              birthday={char.birthday}
-              occupation={char.occupation}
-              status={char.status}
-              actor={char.portrayed}
-            />
-          ))
+          characters.map((char) =>
+            String(char.name.includes(String(searchValue))) === "true" ? (
+              <CharacterCard
+                key={char.char_id}
+                img={char.img}
+                name={char.name}
+                nickname={char.nickname}
+                birthday={char.birthday}
+                occupation={char.occupation}
+                status={char.status}
+                actor={char.portrayed}
+              />
+            ) : null
+          )
         ) : (
           <ActivityIndicator
             style={tailwind("my-32")}

@@ -12,11 +12,11 @@ export default function CharacterCard({img,charid,name,nickname,birthday,occupat
       )}
     >
       <Image
-        resizeMode="cover"
+        resizeMode="stretch"
         source={{
           uri: img,
         }}
-        style={tailwind("w-full h-96 rounded-t-md")}
+        style={tailwind("w-full h-48 rounded-t-md")}
       />
 
       <View style={tailwind("my-1 w-full  bg-black")}>
@@ -54,7 +54,7 @@ export default function CharacterCard({img,charid,name,nickname,birthday,occupat
           <Text style={tailwind("font-bold text-zinc-300 text-xs")}>
             Occupation:
           </Text>{" "}
-          "{occupation}"
+          {occupation.map(el => `"${el}", `)}
         </Text>
 
         <Text

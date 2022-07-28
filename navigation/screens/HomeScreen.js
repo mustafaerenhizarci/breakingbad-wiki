@@ -1,6 +1,5 @@
 import * as React from "react";
-import { View, Text, ImageBackground } from "react-native";
-
+import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
 
 import { useTailwind } from "tailwind-rn";
 
@@ -13,11 +12,11 @@ export default function HomeScreen() {
 
   return (
     <View style={tailwind("w-full h-full")}>
-      <ImageBackground source={BGimage} resizeMode="cover" style={tailwind('h-full w-full flex justify-center items-center')}>
-        <Text style={tailwind("text-xl text-black font-bold bg-white p-2 rounded-lg text-center")}>
-          Home Screen
-        </Text>
-      </ImageBackground>
+      <ImageBackground
+        source={BGimage}
+        resizeMode="cover"
+        style={tailwind("h-full w-full flex justify-center items-center")}
+      ></ImageBackground>
     </View>
   );
 }
