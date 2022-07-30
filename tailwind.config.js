@@ -1,10 +1,10 @@
 module.exports = {
-  content: ["./*.js", "./components/*.js","./navigation/**/*.js"],
+  content: ["./*.js", "./components/*.js", "./navigation/**/*.js"],
   theme: {
     fontFamily: {},
     extend: {
       backgroundImage: {
-        'bbwallpaper':
+        bbwallpaper:
           "url('https://images6.alphacoders.com/321/thumb-1920-321927.jpg')",
       },
     },

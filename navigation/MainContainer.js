@@ -11,7 +11,7 @@ import HomeScreen from "./screens/HomeScreen";
 import CharactersScreen from "./screens/CharactersScreen";
 import DeathsScreen from "./screens/DeathsScreen";
 import QuotesScreen from "./screens/QuotesScreen";
-import AboutScreen from "./screens/About";
+import AboutScreen from "./screens/AboutScreen";
 
 // Screen Names
 const homeName = "Home";
