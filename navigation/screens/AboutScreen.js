@@ -6,6 +6,7 @@ import {
   Linking,
   TouchableOpacity,
   ScrollView,
+  ActivityIndicator,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useTailwind } from "tailwind-rn";
@@ -25,16 +26,14 @@ export default function AboutScreen({ navigation }) {
   }
 
   const [loaded] = useFonts({
-    Montserrat_Regular: require("../../assets/fonts/Montserrat/Montserrat-Regular.ttf"),
     Montserrat_Black: require("../../assets/fonts/Montserrat/Montserrat-Black.ttf"),
     Montserrat_Light: require("../../assets/fonts/Montserrat/Montserrat-Light.ttf"),
-    Ubuntu_Regular: require("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf"),
     Ubuntu_Light: require("../../assets/fonts/Ubuntu/Ubuntu-Light.ttf"),
     Ubuntu_Bold: require("../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf"),
   });
 
   if (!loaded) {
-    console.log("font error");
+    return null;
   }
   const tailwind = useTailwind();
   return (
@@ -45,10 +44,25 @@ export default function AboutScreen({ navigation }) {
           resizeMode="cover"
           source={require("../../assets/images/walter-white.png")}
         />
-        <View style={tailwind('flex flex-row justify-center items-center')}>
-        <Ionicons name="arrow-down-outline" style={tailwind('text-4xl text-white text-center text-blue-200 mt-6')}/>
-        <Ionicons name="arrow-down-outline" style={tailwind('text-4xl text-white text-center text-blue-400 mt-6')}/>
-        <Ionicons name="arrow-down-outline" style={tailwind('text-4xl text-white text-center text-blue-200 mt-6')}/>
+        <View style={tailwind("flex flex-row justify-center items-center")}>
+          <Ionicons
+            name="arrow-down-outline"
+            style={tailwind(
+              "text-4xl text-white text-center text-blue-200 mt-6"
+            )}
+          />
+          <Ionicons
+            name="arrow-down-outline"
+            style={tailwind(
+              "text-4xl text-white text-center text-blue-400 mt-6"
+            )}
+          />
+          <Ionicons
+            name="arrow-down-outline"
+            style={tailwind(
+              "text-4xl text-white text-center text-blue-200 mt-6"
+            )}
+          />
         </View>
         <Text
           style={[
@@ -89,7 +103,7 @@ export default function AboutScreen({ navigation }) {
           ]}
         >
           If you like my little project , you can tell about my app to your
-          friends and even you can encourage me with some coffee in this
+          friends and even you can encourage me with some extra support in this
           journey.
         </Text>
 

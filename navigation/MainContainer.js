@@ -1,6 +1,4 @@
 import * as React from "react";
-import { View, Text } from "react-native";
-
 import { useTailwind } from "tailwind-rn";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -65,7 +63,9 @@ export default function MainContainer() {
           tabBarHideOnKeyboard:"true"
         })}
       >
-        <Tab.Screen name={homeName} component={HomeScreen} />
+        <Tab.Screen options={{headerStyle:{
+          backgroundColor:"transparent"
+        }}} name={homeName} component={HomeScreen} />
         <Tab.Screen name={charactersName} component={CharactersScreen} />
         <Tab.Screen name={quotesName} component={QuotesScreen} />
         <Tab.Screen name={deathsName} component={DeathsScreen} />

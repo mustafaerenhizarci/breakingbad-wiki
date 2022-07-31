@@ -32,7 +32,6 @@ export default function CharactersScreen({ navigation }) {
     <View
       style={tailwind("flex justify-start items-center h-full bg-gray-700 ")}
     >
-      <MainHeader content={"Search Character"} />
       <View
         style={tailwind(
           "my-4 pt-2 pb-4 w-full h-16 flex justify-around items-center flex-row"
@@ -42,9 +41,9 @@ export default function CharactersScreen({ navigation }) {
           onChangeText={setSearchValue}
           value={searchValue}
           style={tailwind(
-            "text-black bg-white w-5/6 h-12 px-3 py-2 text-lg rounded-md"
+            "text-black bg-white w-5/6 h-12 px-3 py-2 text-lg"
           )}
-          placeholder="Enter a name"
+          placeholder="Search By Name..."
         />
       </View>
 
