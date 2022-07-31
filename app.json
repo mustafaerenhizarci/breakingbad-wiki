@@ -1,11 +1,18 @@
 {
   "expo": {
-    "name": "breakingbad",
+    "name": "Breaking Bad Wiki",
+    "icon": "./assets/images/walter-white.png",
+    "splash": {
+      "image": "./assets/images/walter-white.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "slug": "breakingbad",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "orientation": "portrait"
+    "assetBundlePatterns": ["**/*"],
+    "orientation": "portrait",
+    "android": {
+      "package": "com.breakingbadwiki.app"
+    }
   }
 }
