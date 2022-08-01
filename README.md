@@ -15,17 +15,17 @@ If you are a Breaking Bad Fan I think you will love this.
 <h1>Screenshots</h1>
 <ul style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;list-style:none;">
 <li>
-<img src="./Screenshots/Home%20Screen.png"/>
+<img src="./Screenshots/Home%20Screen.png" width="300px"/>
 </li>
 <li>
-<img src="./Screenshots/Characters%20Screen.png"/>
+<img src="./Screenshots/Characters%20Screen.png" width="300px"/>
 </li>
 <li>
-<img src="./Screenshots/Quotes%20Screen.png"/>
+<img src="./Screenshots/Quotes%20Screen.png" width="300px"/>
 </li>
 <li>
-<img src="./Screenshots/Deaths%20Screen.png"/>
-</li>
+<img src="./Screenshots/Deaths%20Screen.png" width="300px"/>
+</li> 
 </ul>
 
 <h1>Download</h1>
