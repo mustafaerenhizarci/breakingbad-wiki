@@ -14,13 +14,13 @@ If you are a Breaking Bad Fan I think you will love this.
 
 <h1>Screenshots</h1>
 
-<img src="./Screenshots/Home%20Screen.png" width="300px"/>
+<img src="./screenshots/Home%20Screen.png" width="300px"/>
 
-<img src="./Screenshots/Characters%20Screen.png" width="300px"/>
+<img src="./screenshots/Characters%20Screen.png" width="300px"/>
 
-<img src="./Screenshots/Quotes%20Screen.png" width="300px"/>
+<img src="./screenshots/Quotes%20Screen.png" width="300px"/>
 
-<img src="./Screenshots/Deaths%20Screen.png" width="300px"/>
+<img src="./screenshots/Deaths%20Screen.png" width="300px"/>
 
 <h1>Download</h1>
 <a style="color:slateblue;text-decoration:underline;font-size:2rem" href="https://drive.google.com/file/d/176Pg8E7twf0OLU2zFOlEvs7grXbaebcn/view?usp=sharing">Android APK</a>
